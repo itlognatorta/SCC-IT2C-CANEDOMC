@@ -18,6 +18,9 @@ public class NewMain {
 
 //        netPay np = new netPay();
 //        np.getPay();
+
+          Account acc = new Account();
+          acc.addAcc();
         
     }
 }
