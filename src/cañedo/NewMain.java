@@ -7,8 +7,8 @@ public class NewMain {
    
     public static void main(String[] args){
         
-//      Grade gr = new Grade();
-//      gr.addGrade();
+      Grade gr = new Grade();
+      gr.addGrade();
 
 //      Product pr = new Product();
 //      pr.addProduct();
@@ -19,8 +19,8 @@ public class NewMain {
 //        netPay np = new netPay();
 //        np.getPay();
 
-          Account acc = new Account();
-          acc.addAcc();
+//          Account acc = new Account();
+//          acc.addAcc();
         
     }
 }
