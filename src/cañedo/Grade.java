@@ -4,27 +4,6 @@ package cañedo;
 import java.util.Scanner;
 
 public class Grade {
-    
-    public void editGrades(Grades[] grs, int size, int id){
-       Scanner input = new Scanner(System.in);
-       for(int i = 0; i < size; i++){
-           if(grs[i].id == id){
-               System.out.println("New Prelim Grade: ");
-               double prl = input.nextFloat();
-               grs[i].p = prl;              
-               System.out.println("New Midterm Grade: ");
-               double mid  = input.nextFloat();
-               grs[i].m = mid;                            
-               System.out.println("New PreFi Grade: ");
-               double prf = input.nextFloat();
-               grs[i].pf = prf;
-               System.out.println("New Prelim Grade: ");
-               double fi = input.nextFloat();
-               grs[i].f = fi;
-               
-           }
-       }
-    }
       
      public void addGrade () {
          
@@ -95,14 +74,25 @@ public class Grade {
             System.out.println("Enter the ID to update: ");
             int ids = input.nextInt();
             System.out.println(""+ids);
-            editGrades(gr, noStuds, ids);                
+            Grades grs = new Grades();
+            grs.editGrades(gr, noStuds, ids);                
         break;   
+        
+        case 4:
+             Grades graw = new Grades();   
+             System.out.println("Enter the ID to remove: ");
+             ids = input.nextInt();
+             noStuds = graw.removeGrade(gr, noStuds, ids); 
+            
+        break;
                 }
                 System.out.println("Do you want to continue (Y/N): ");
                 op = input.next();
             }while(op.equals("Y")|| op.equals("y"));
      }
+      
 }
+      
 
     
     
